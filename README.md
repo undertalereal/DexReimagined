@@ -13,7 +13,7 @@ Paste this into your executor and run it:
 loadstring(game:HttpGet("https://raw.githubusercontent.com/undertalereal/Dex-Reimagined/main/dex-reimagined.lua"))()
 ```
 
-## What's new
+## Current Features
 
 **Viewers**
 - **3D Model Viewer** – preview a model in a little 3D window.
