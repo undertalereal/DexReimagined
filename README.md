@@ -20,6 +20,10 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/undertalereal/Dex-Rei
 - The **Favorites** window lists saved instance paths. Click `→` to jump to the instance in the Explorer, or `X` to remove it.
 - Favorites are saved to `DexPlusPlusSettings.json` and saves between sessions. Missing instances are shown as `(missing)`.
 - <img width="294" height="365" alt="image" src="https://github.com/user-attachments/assets/f8851b23-f660-4f21-8f3c-f3c848ee754d" />
+<img width="186" height="54" alt="image" src="https://github.com/user-attachments/assets/9f79f95a-8744-4a92-9c6c-61a8d4c99cc1" />
+<img width="186" height="26" alt="image" src="https://github.com/user-attachments/assets/ffecf90c-5270-4799-b765-9605084435f7" />
+
+
 
 
 ### Previewers
