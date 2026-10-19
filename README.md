@@ -13,33 +13,45 @@ Paste this into your executor and run it:
 loadstring(game:HttpGet("https://raw.githubusercontent.com/undertalereal/Dex-Reimagined/main/dex-reimagined.lua"))()
 ```
 
-## Current Features
+## Features in 1.2
 
-**Viewers**
-- **3D Model Viewer** – preview a model in a little 3D window.
-- **Decal Preview** – right click a Decal or Texture to see the image, plus its name, owner, asset ID and when it was made. Each one has a copy button. There's also a "Decal Viewer" tile in the menu.
-- **Animation Preview** – right click an Animation and it plays on a copy of your character.
-- **Mesh Preview** – right click a MeshPart or SpecialMesh to look at it.
+### Favorites
+- Right-click any instance in the Explorer and choose **Add to Favorites** / **Remove from Favorites**.
+- The **Favorites** window lists saved instance paths. Click `→` to jump to the instance in the Explorer, or `X` to remove it.
+- Favorites are saved to `DexPlusPlusSettings.json` and saves between sessions. Missing instances are shown as `(missing)`.
 
-**Explorer**
-- **Favorites** – right click something to add or remove it from favorites. They get saved, so they're still there next time.
-- **Copy All Properties** – right click one object and it copies every property as a Lua table (`local Properties = { ... }`). Properties that can't be written out (like other Instances) are left as `nil` with a comment saying what they were.
+### Previewers
+- **Decal Preview**: right-click a `Decal`/`Texture` to see the image, asset name, owner, ID and creation date, each with a copy button.
+- **Mesh Preview**: right-click a `MeshPart`/`SpecialMesh` for an orbitable 3D view with asset info.
+- **Animation Preview**: right-click an `Animation` to play it on a clone of your character (drag to orbit, scroll to zoom).
+- **3D Preview**: view `Model`/`BasePart` instances, with auto-rotate, auto-refresh and camera lock options.
 
-**Script Viewer**
-- **Find bar** – search while you type, not case sensitive. Has up/down buttons, a match counter, and it highlights and scrolls to the match.
-- **Save button** – sits between Execute and Clear, writes your edits back to the script's `Source`.
+### GC Scanner
+Search `getgc` results by function name, constant, upvalue, or table key/value. Click a result to copy it, or press **View** to open the owning script.
+*Requires executor support for `getgc` (and `getconstants`/`getupvalues` for those modes).*
 
-**Settings**
-- **Theme colors** – 15 color pickers (window, panel, outlines, buttons, text and so on) and a Reset Colors button.
-- **Per-window colors** – give Explorer, Properties, Console, Save Instance or Favorites their own background color.
+### Settings window
+- Class icon set (`Old`, `NewDark`, `Vanilla3`), window title alignment and background transparency.
+- Full theme color pickers, plus per-window background color overrides.
+- Explorer, Properties, Script Viewer and decompiler options (fallback: Konstant, AdvancedDecompiler, Shiny).
+- Press **Restart** to save and apply changes.
 
-## Things to know
+### Explorer additions
+- **Copy All Properties**, **Block/Unblock Remote** (needs `hookmetamethod`), **Fire ClickDetector / ProximityPrompt / TouchTransmitter**, **Save Script / Bytecode**, **Dump Functions**.
+- Search filters: `/remotes`, `/bindables`, `/isa Class`, `/rad N`, `/players`, `/loadedmodules`.
 
-- Theme changes need you to hit **Save** and then **restart Dex** to show up.
-- Per-window colors only work on windows that have a fixed title (the five above).
-- The **Highlight** color is in the list but nothing uses it yet.
-- The script Save button doesn't change code that's already running. It only changes the saved `Source`.
-- Copy All Properties needs an executor that has `setclipboard`.
+### Script Viewer
+- Search bar (`Ctrl+F`) with case-sensitive, whole-word and regex toggles, and match navigation.
+- **Save** writes edits back to the script's `Source` (does not affect running code).
+
+### Other
+- Console window with syntax-highlighted command line and log output.
+- Save Instance window with decompile options.
+- Plugin support: place `.lua` files in `dex/plugins`.
+- Mobile/touch input support.
+
+## Requirements
+Features depend on executor functions such as `getgc`, `decompile`/`getscriptbytecode`, `saveinstance`, `hookmetamethod`, `writefile` and `setclipboard`. Unsupported features are disabled automatically.
 
 ## Credits
 
