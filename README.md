@@ -37,7 +37,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/undertalereal/Dex-Rei
 ### GC Scanner
 Search `getgc` results by function name, constant, upvalue, or table key/value. Click a result to copy it, or press **View** to open the owning script.
 *Requires executor support for `getgc` (and `getconstants`/`getupvalues` for those modes).*
-<img width="647" height="824" alt="image" src="https://github.com/user-attachments/assets/c277a630-9415-4907-b216-960f77406cc3" />
+-<img width="647" height="824" alt="image" src="https://github.com/user-attachments/assets/c277a630-9415-4907-b216-960f77406cc3" />
 
 
 ### Settings window
